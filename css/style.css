@@ -342,13 +342,12 @@ h1 {
 
 .forumAgenda .nsubContainer {
     padding: 5px 20px;
-    display: flex;
+    display: none;
 
     flex-direction: column;
     flex-wrap: wrap;
     gap: 0px 50px;
     overflow-y: hidden;
-    transition: all .2s ease;
     scroll-behavior: smooth;
     height: 320px;
     /* scroll-snap-type: x mandatory; */
@@ -629,6 +628,7 @@ h1 {
     background-color: transparent;
     z-index: -1;
     right: 50%;
+    scroll-snap-align: center;
 
 
 }
@@ -661,7 +661,7 @@ h1 {
 .lblContainer {
     display: flex;
     justify-content: center;
-    gap: 0px 5px;
+    gap: 0px 1px;
     position: relative;
     top: -5px;
 
@@ -755,4 +755,50 @@ form label {
     left: 0px;
     background-color: rgba(128, 128, 128, 0.692);
     display: none;
+}
+
+.day1b,
+.day2b {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.day2b label {
+    background-color: #2e5870;
+}
+
+
+input[type='radio'] {
+    display: none;
+}
+
+#day1:checked~.day1h,
+#day2:checked~.day2h,
+#day1:checked~.day1b,
+#day2:checked~.day2b {
+    display: flex;
+}
+
+.lbld1,
+.lbld2 {
+    background-color: #8b8b8b;
+    transition: all .2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: initial;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+#day1:checked~.days .lbld1,
+#day2:checked~.days .lbld2 {
+
+    background-color: #cc050c;
+    width: 70px;
+
 }
