@@ -768,6 +768,11 @@ form label {
     background-color: #2e5870;
 }
 
+.day2b label:hover,
+.lbld2:hover {
+    background-color: #203d4e;
+}
+
 
 input[type='radio'] {
     display: none;
