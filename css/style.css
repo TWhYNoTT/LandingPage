@@ -540,6 +540,7 @@ h1 {
     appearance: none;
     z-index: 101;
     font-weight: bold;
+    cursor: pointer;
 
 }
 
@@ -668,7 +669,7 @@ h1 {
 
 form {
     padding: 20px;
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -722,6 +723,9 @@ form input[type='submit'] {
     padding: 10px;
     width: 150px;
     font-weight: bold;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.712);
+    text-transform: uppercase;
 }
 
 form input:hover,
