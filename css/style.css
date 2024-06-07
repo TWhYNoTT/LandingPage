@@ -788,13 +788,16 @@ input[type='radio'] {
 .lbld1,
 .lbld2 {
     /* background-color: #8b8b8b; */
+    overflow: hidden;
+    white-space: nowrap;
     transition: all .2s ease;
     display: flex;
     justify-content: center;
+
     align-items: center;
     padding: initial;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
     -ms-transition: all .2s ease;
@@ -804,10 +807,26 @@ input[type='radio'] {
 #day1:checked~.days .lbld1,
 #day2:checked~.days .lbld2 {
     /* background-color: #cc050c; */
-    width: 70px;
+    width: 160px;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+}
+
+.lbld1::after {
+    content: '19th';
+}
+
+#day1:checked~.days .lbld1::after {
+    content: '19th May';
+}
+
+.lbld2::after {
+    content: '20th';
+}
+
+#day2:checked~.days .lbld2::after {
+    content: '20th May';
 }
