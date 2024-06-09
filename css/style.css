@@ -335,12 +335,14 @@ h1 {
 
 .forumAgenda {
     background-color: #ffffffe1;
+    scroll-behavior: smooth;
 }
 
 .forumAgenda .container {
     overflow: hidden;
     position: relative;
     height: 530px;
+    scroll-behavior: smooth;
 }
 
 .forumAgenda .nsubContainer {
@@ -351,22 +353,26 @@ h1 {
     flex-wrap: wrap;
     gap: 0px 50px;
     overflow-y: hidden;
-    scroll-behavior: smooth;
     height: 320px;
+    width: 100%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
     /* scroll-snap-type: x mandatory; */
 
 }
 
 .forumAgenda .nsubContainer::-webkit-scrollbar {
     height: 1px;
-    /* background: transparent; */
+    display: none;
+    background: transparent;
 }
 
-/* .forumAgenda .nsubContainer::-webkit-scrollbar-thumb {
+.forumAgenda .nsubContainer::-webkit-scrollbar-thumb {
+    height: 1px;
+    display: none;
+    background: transparent;
 
-    background: ;
-
-} */
+}
 
 .forumAgenda .card {
     height: 270px;
